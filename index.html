@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Navila, I'm sorry ❤️</title>
+  <meta name="description" content="A small, sweet apology from me to you, Navila." />
+  <meta property="og:title" content="Navila, I'm sorry ❤️" />
+  <meta property="og:description" content="I was busy at work, but you are my priority. This is just for you." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#ffb6c1" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
+  <style>
+    :root{
+      --bg:#fff6f8; /* blush */
+      --card:#ffffff;
+      --ink:#222;
+      --accent:#ff4d6d; /* rose */
+      --accent-2:#ff85a1; /* light rose */
+      --shadow: 0 10px 30px rgba(255,77,109,.25);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--ink);
+      background: radial-gradient(1200px 800px at 10% 10%, #ffe0e8 0%, transparent 50%),
+                  radial-gradient(1200px 800px at 90% 20%, #ffeaf0 0%, transparent 50%),
+                  var(--bg);
+      overflow-x:hidden;
+    }
+    .wrap{min-height:100%;display:grid;place-items:center;padding:32px}
+    .card{
+      width:min(720px, 95vw);
+      background:var(--card);
+      border-radius:28px;
+      box-shadow:var(--shadow);
+      padding:28px 24px 32px;
+      position:relative;
+      overflow:hidden;
+      border: 2px solid #ffd6df;
+    }
+    header{
+      display:flex;align-items:center;gap:14px;justify-content:center;margin-top:6px
+    }
+    header .heart{font-size:28px;filter: drop-shadow(0 4px 8px rgba(255,77,109,.35));}
+    h1{font-size: clamp(28px, 4vw, 40px);margin:6px 0 8px 0;line-height:1.15;text-align:center}
+    p.lead{font-size: clamp(16px, 2.5vw, 18px);opacity:.9;text-align:center;margin:0 0 12px}
+
+    .letter{
+      background: linear-gradient(180deg, #fff, #fff9fb);
+      border:1px dashed #ffd0da; border-radius:18px; padding:18px; margin:18px 0 14px;
+    }
+    .letter p{margin:10px 0; line-height:1.6}
+
+    .pill{
+      display:inline-flex;align-items:center;gap:10px; border-radius:999px; padding:12px 18px; border:2px solid #ffc2ce; background:#fff; cursor:pointer; user-select:none;
+      box-shadow: 0 6px 16px rgba(255,77,109,.18);
+      transition: transform .08s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .pill:hover{ transform: translateY(-1px); box-shadow: 0 10px 24px rgba(255,77,109,.22);}
+    .pill:active{ transform: translateY(1px);}
+    .pill .dot{width:10px;height:10px;background:var(--accent);border-radius:999px;}
+
+    .actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:12px}
+
+    .note{font-size:13px;opacity:.7;text-align:center;margin-top:6px}
+
+    /* floating hearts */
+    .h{ position: fixed; left: var(--x); top: var(--y); pointer-events:none; opacity:.8; transform: translate(-50%, -50%) scale(var(--s)); animation: floatUp var(--d) ease-in forwards; filter: drop-shadow(0 8px 12px rgba(255,77,109,.25));}
+    @keyframes floatUp{ to{ transform: translate(-50%, -180vh) scale(calc(var(--s)*1.2)); opacity:0; }}
+
+    /* modal */
+    dialog{ border: none; border-radius: 20px; width:min(680px,94vw); padding:0; box-shadow:var(--shadow); }
+    dialog::backdrop{ background: rgba(0,0,0,.35); }
+    .modal-body{ padding:22px 22px 8px; }
+    .modal-head{ padding:18px 22px; background: linear-gradient(90deg, #ffe4ec, #fff); border-bottom:1px solid #ffd6df; border-radius:20px 20px 0 0; display:flex; align-items:center; gap:8px;}
+    .modal-head h3{ margin:0; font-size:clamp(18px,3vw,22px)}
+    .btn{ display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px; border:2px solid #ffc2ce; background:#fff; cursor:pointer; transition:.15s; }
+    .btn:hover{ transform: translateY(-1px); box-shadow: 0 6px 18px rgba(255,77,109,.18) }
+
+    footer{ text-align:center; font-size:12px; opacity:.6; margin-top:10px }
+    .sig{ font-family: "Comic Sans MS", "Comic Neue", system-ui, sans-serif; font-size:18px }
+
+    /* mini timeline */
+    .timeline{ display:grid; grid-template-columns: 1fr; gap:10px; margin:10px 0 0 }
+    .t{ display:flex; align-items:center; gap:10px; background:#fff; border:1px solid #ffe0e8; border-radius:14px; padding:10px 12px }
+    .t .b{ width:10px; height:10px; background:var(--accent-2); border-radius:999px }
+
+    /* responsive image */
+    .photo{ width:100%; aspect-ratio: 16/9; background: #ffeaf0; border: 1px solid #ffd6df; border-radius:16px; display:grid; place-items:center; color:#ff6b8a }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <main class="card" aria-live="polite">
+      <header>
+        <span class="heart" aria-hidden="true">💌</span>
+        <h1>Navila, I'm sorry</h1>
+        <span class="heart" aria-hidden="true">💗</span>
+      </header>
+
+      <p class="lead">I was caught up with work and I made you feel unimportant. You are never second to my to‑do list. This page is just for you. 🫶</p>
+
+      <section class="letter" id="letter">
+        <p>Dear Navila,</p>
+        <p>I’m really sorry I was busy at work and didn’t give you the time and attention you deserve. I know that hurt your feelings. Thank you for being patient with me. I love you and I’m learning to balance things better, because <strong>we</strong> matter to me more than any deadline.</p>
+        <p>Can we start fresh today? Ice cream on me, a long walk, and I’ll listen to everything on your mind. 💕</p>
+        <p class="sig">— Yours</p>
+      </section>
+
+      <div class="actions">
+        <button class="pill" id="openPlan" aria-controls="planModal">
+          <span class="dot"></span>
+          <span>open our little plan</span>
+        </button>
+        <a class="pill" href="mailto:?subject=Let%27s%20talk%20%F0%9F%92%97&body=I%27m%20sorry%20I%20was%20busy%20at%20work.%20Can%20we%20talk%20and%20hang%20out%20tonight%3F" rel="nofollow">
+          <span class="dot"></span>
+          <span>message me</span>
+        </a>
+      </div>
+
+      <p class="note">(tap the hearts or anywhere—there’s a tiny surprise)</p>
+
+      <div class="timeline" aria-label="Tiny timeline of us">
+        <div class="t"><span class="b"></span><span>today: I apologize and make time for you</span></div>
+        <div class="t"><span class="b"></span><span>tonight: your favorite treat and a slow walk</span></div>
+        <div class="t"><span class="b"></span><span>this week: one no‑work evening that’s all yours</span></div>
+      </div>
+
+      <div class="photo" role="img" aria-label="A placeholder photo area you can replace with your own photo">
+        add a cute photo of us here 💖 (replace this box with an <img>!)
+      </div>
+
+      <footer>made with love, some CSS, and a lot of sorrys</footer>
+    </main>
+  </div>
+
+  <!-- Modal Plan -->
+  <dialog id="planModal" aria-labelledby="planTitle">
+    <div class="modal-head">
+      <span>🗓️</span>
+      <h3 id="planTitle">our tiny make‑it‑better plan</h3>
+    </div>
+    <div class="modal-body">
+      <ol>
+        <li>tonight: I switch off work notifications after 7pm</li>
+        <li>we pick a date night this week (your choice!)</li>
+        <li>every week: one evening that’s 100% us, no phones</li>
+      </ol>
+      <div style="display:flex; gap:10px; justify-content:flex-end; padding:10px 0 16px">
+        <button class="btn" id="closePlan">sounds good 💗</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    // floating hearts on click/tap
+    const spawnHeart = (x, y) => {
+      const e = document.createElement('div');
+      e.className = 'h';
+      e.textContent = ['💗','💖','💓','❤️','💕'][Math.floor(Math.random()*5)];
+      e.style.setProperty('--x', x + 'px');
+      e.style.setProperty('--y', y + 'px');
+      e.style.setProperty('--s', (Math.random()*0.6 + 0.6).toFixed(2));
+      e.style.setProperty('--d', (Math.random()*2 + 3).toFixed(2) + 's');
+      document.body.appendChild(e);
+      setTimeout(() => e.remove(), 5000);
+    };
+
+    window.addEventListener('pointerdown', (ev)=>{
+      spawnHeart(ev.clientX, ev.clientY);
+    });
+
+    // confetti on load (tiny + gentle)
+    const gentleBurst = () => {
+      for(let i=0;i<16;i++) setTimeout(()=>spawnHeart(window.innerWidth*Math.random(), window.innerHeight*0.9), i*120);
+    };
+    window.addEventListener('load', gentleBurst);
+
+    // modal controls
+    const dlg = document.getElementById('planModal');
+    document.getElementById('openPlan').addEventListener('click', ()=> dlg.showModal());
+    document.getElementById('closePlan').addEventListener('click', ()=> dlg.close());
+
+    // accessibility: close on Esc backdrop click
+    dlg.addEventListener('click', (e)=>{ const r = dlg.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) dlg.close(); });
+  </script>
+</body>
+</html>
